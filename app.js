@@ -54,7 +54,7 @@ var sessionChecker = (req, res, next) => {
   }
 };
 
-mongoose.connect("mongodb+srv://krshubham544:@Universe544@cluster0.lk1dwi7.mongodb.net/");
+mongoose.connect(process.env.MONGO_URL);
 
 const userSchema = {
   firstName: String,
