@@ -4,9 +4,10 @@
   "description": "Web Development project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
-  "author": "Shekhar Singh",
+  "author": "Jannat Jubair mohit ki hai",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
