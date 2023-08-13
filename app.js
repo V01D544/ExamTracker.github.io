@@ -32,6 +32,7 @@ app.use(
     secret:process.env.SECRET,
     resave: false,
     saveUninitialized: false,
+    // maxAge: 24 * 60 * 60 * 1000
     cookie: {
       expires: 6000000,
     },
@@ -54,7 +55,7 @@ var sessionChecker = (req, res, next) => {
   }
 };
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(process.env.DB);
 
 const userSchema = {
   firstName: String,
@@ -678,6 +679,6 @@ app.post("/adminSomeUsers/",async function(req,res){
 
 /////Listening 
 
-app.listen(3000, function () {
-  console.log("Server is running at port 3000");
+app.listen(process.env.PORT, function () {
+  console.log(`Server is running at ${process.env.PORT}`);
 });
